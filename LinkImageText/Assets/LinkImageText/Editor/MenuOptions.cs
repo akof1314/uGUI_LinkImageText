@@ -16,6 +16,9 @@ public static class MenuOptions
         LinkImageText lbl = child.AddComponent<LinkImageText>();
         lbl.text = "New LinkImageText";
         lbl.color = new Color(50f / 255f, 50f / 255f, 50f / 255f, 1f);
+#if UNITY_5_3_OR_NEWER
+        lbl.alignByGeometry = true;
+#endif
 
         PlaceUIElementRoot(child, menuCommand);
     }
